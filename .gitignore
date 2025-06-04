@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# IDE/editor settings
+.idea/
+.vscode/
+
+# Uploaded files (optional)
+uploads/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

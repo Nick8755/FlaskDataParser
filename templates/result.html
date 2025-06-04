@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parsed Data Result</title>
+</head>
+<body>
+    <!-- Show the filename -->
+    <h1>Parsed result for file: {{ filename }}</h1>
+
+    <!-- Loop for each section in the parsed file -->
+    {% if sections|length == 0 %}
+        <p>No sections found in the file.</p>
+    {% endif %}
+    {% for section in sections %}
+        <hr>
+        <h2>Section {{ loop.index }}</h2>
+
+        <!-- Display metadata -->
+        <h3>Metadata:</h3>
+        <ul>
+            {% for line in section.metadata %}
+                <li>{{ line }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Display 10 data points -->
+        <h3>10 data points:</h3>
+        <ul>
+            {% for point in section.data_points %}
+                <li>{{ point[0] }} {{ point[1] }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <!-- Link to upload another file -->
+    <br><a href="/">⬅ Upload another file</a>
+</body>
+</html>

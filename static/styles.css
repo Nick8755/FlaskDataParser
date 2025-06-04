@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+.custom-button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #e6e6e6;
+}
+
+#file-name {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+}
